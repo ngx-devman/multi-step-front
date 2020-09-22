@@ -41,7 +41,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             $scope.status = false;
            return;
         } else {
-            $http.post("http://localhost:8080/user", formData).success((data, status) => {
+            $http.post("https://multi-step-backend.herokuapp.com/user", formData).success((data, status) => {
                 if( status == "200") {
                     $scope.status = true;
                 }
